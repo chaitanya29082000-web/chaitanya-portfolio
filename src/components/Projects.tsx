@@ -6,10 +6,21 @@ interface Project {
   status: string
   github: string | null
   demo: string | null
-  visual: 'jaldrishti' | 'apforge'
+  visual: 'careerpilot' | 'jaldrishti' | 'apforge'
 }
 
 const projects: Project[] = [
+  {
+    name: 'CareerPilot AI',
+    category: 'AI / Career Assistant',
+    description:
+      'AI-powered resume-to-job matching and career guidance assistant. Upload a resume PDF, provide a job description, and receive a match score, skill gap analysis, personalized recommendations, and interview questions.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PDF Parsing', 'OpenRouter', 'Google Gemma 4'],
+    status: 'Active',
+    github: 'https://github.com/chaitanya29082000-web/careerpilot-ai',
+    demo: 'https://careerpilot-ai-three-ecru.vercel.app',
+    visual: 'careerpilot',
+  },
   {
     name: 'Jaldrishti AI',
     category: 'AI / Machine Learning',
@@ -34,7 +45,58 @@ const projects: Project[] = [
   },
 ]
 
-function ProjectVisual({ type }: { type: 'jaldrishti' | 'apforge' }) {
+function ProjectVisual({ type }: { type: 'careerpilot' | 'jaldrishti' | 'apforge' }) {
+  if (type === 'careerpilot') {
+    return (
+      <div className="relative w-full h-full bg-gradient-to-br from-accent/10 via-bg-card to-indigo-800/15 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-accent/8 rounded-full blur-3xl" />
+
+          <div className="absolute top-[20%] left-[22%] text-accent/15">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+              <path d="M14 2v6h6" />
+              <line x1="9" y1="13" x2="15" y2="13" />
+              <line x1="9" y1="17" x2="13" y2="17" />
+            </svg>
+          </div>
+
+          <svg className="absolute inset-0 w-full h-full opacity-[0.08]" viewBox="0 0 400 300">
+            <path d="M120 120 C200 80 280 80 320 120" stroke="currentColor" strokeWidth="1.5" fill="none" strokeDasharray="4 4" className="text-accent" />
+            <path d="M120 180 C200 220 280 220 320 180" stroke="currentColor" strokeWidth="1.5" fill="none" strokeDasharray="4 4" className="text-accent" />
+            <circle cx="120" cy="120" r="4" className="text-accent" fill="currentColor" opacity="0.3" />
+            <circle cx="320" cy="120" r="4" className="text-accent" fill="currentColor" opacity="0.3" />
+            <circle cx="120" cy="180" r="4" className="text-accent" fill="currentColor" opacity="0.3" />
+            <circle cx="320" cy="180" r="4" className="text-accent" fill="currentColor" opacity="0.3" />
+          </svg>
+
+          <div className="absolute bottom-[28%] left-[25%] flex items-center gap-3">
+            <div className="w-32 h-2 bg-accent/10 rounded-full overflow-hidden">
+              <div className="w-3/4 h-full bg-accent/25 rounded-full" />
+            </div>
+            <span className="text-accent/20 text-xs font-mono">87%</span>
+          </div>
+
+          <div className="absolute top-[18%] right-[18%] text-accent-light/12">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+              <path d="M4 4h16v16H4z" />
+              <line x1="8" y1="9" x2="16" y2="9" />
+              <line x1="8" y1="13" x2="14" y2="13" />
+              <line x1="8" y1="17" x2="12" y2="17" />
+            </svg>
+          </div>
+
+          <div className="absolute bottom-[35%] right-[15%] flex gap-2">
+            <div className="w-10 h-1.5 bg-accent/12 rounded-full" />
+            <div className="w-14 h-1.5 bg-accent/8 rounded-full" />
+          </div>
+
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-accent/20 rounded-full border border-accent/15" />
+        </div>
+      </div>
+    )
+  }
+
   if (type === 'jaldrishti') {
     return (
       <div className="relative w-full h-full bg-gradient-to-br from-accent/8 via-bg-card to-indigo-900/10 overflow-hidden">
