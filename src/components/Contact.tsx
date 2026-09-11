@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react'
+import { type ReactNode, useState } from 'react'
 
 interface ContactOption {
   label: string
@@ -8,11 +8,11 @@ interface ContactOption {
 
 const contactOptions: ContactOption[] = [
   {
-    label: 'GitHub',
-    href: 'https://github.com/chaitanya29082000-web',
+    label: 'Email',
+    href: 'mailto:chaitanya29082000@gmail.com',
     icon: (
-      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
       </svg>
     ),
   },
@@ -26,56 +26,129 @@ const contactOptions: ContactOption[] = [
     ),
   },
   {
-    label: 'Email',
-    href: 'mailto:chaitanya29082000@gmail.com',
+    label: 'GitHub',
+    href: 'https://github.com/chaitanya29082000-web',
     icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
       </svg>
     ),
   },
 ]
 
 export default function Contact() {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    const subject = `Portfolio Contact from ${formData.name}`
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+    window.open(`mailto:chaitanya29082000@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_blank')
+  }
+
   return (
     <section id="contact" className="py-24 sm:py-32 px-6">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Section header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
+        <div className="flex items-center gap-4 mb-16">
+          <span className="text-text-muted text-sm font-mono">06.</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-text-primary">
             Let's Connect
           </h2>
-          <p className="text-text-secondary text-lg max-w-xl mx-auto">
-            Have a project, opportunity, or idea? I'd be happy to connect.
-          </p>
+          <div className="flex-1 h-px bg-border ml-4" />
         </div>
 
-        {/* Contact cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          {contactOptions.map((option) => (
-            <a
-              key={option.label}
-              href={option.href}
-              target={option.href.startsWith('mailto') ? undefined : '_blank'}
-              rel={option.href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
-              className="group flex flex-col items-center p-8 bg-bg-card border border-border rounded-2xl text-center transition-all duration-300 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5 cursor-pointer focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg-card"
+        {/* Supporting text */}
+        <p className="text-text-secondary text-lg max-w-2xl mb-12 leading-relaxed">
+          Have a project idea, a question, or just want to say hi? I'd love to hear from you!
+        </p>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          {/* Left: Social cards */}
+          <div className="space-y-4">
+            {contactOptions.map((option) => (
+              <a
+                key={option.label}
+                href={option.href}
+                target={option.href.startsWith('mailto') ? undefined : '_blank'}
+                rel={option.href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
+                className="group flex items-center gap-4 p-5 bg-white border border-border rounded-xl transition-all duration-300 hover:border-accent/30 hover:shadow-md hover:shadow-accent/5"
+              >
+                <div className="flex-shrink-0 w-11 h-11 flex items-center justify-center rounded-lg bg-bg-secondary border border-border text-text-muted group-hover:bg-accent/10 group-hover:text-accent group-hover:border-accent/20 transition-all duration-300">
+                  {option.icon}
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-sm font-semibold text-text-primary mb-0.5">
+                    {option.label}
+                  </h3>
+                  <p className="text-text-muted text-xs">
+                    {option.href.startsWith('mailto') ? option.href.replace('mailto:', '') : 'Connect'}
+                  </p>
+                </div>
+                <svg className="w-4 h-4 text-text-muted group-hover:text-accent group-hover:translate-x-1 transition-all duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </a>
+            ))}
+          </div>
+
+          {/* Right: Contact form */}
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-text-primary mb-2">
+                Your Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                className="w-full px-4 py-3 bg-white border border-border rounded-xl text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all duration-200"
+                placeholder="John Doe"
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-text-primary mb-2">
+                Your Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                className="w-full px-4 py-3 bg-white border border-border rounded-xl text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all duration-200"
+                placeholder="john@example.com"
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-text-primary mb-2">
+                Your Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows={5}
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                className="w-full px-4 py-3 bg-white border border-border rounded-xl text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all duration-200 resize-none"
+                placeholder="Tell me about your project or just say hi..."
+              />
+            </div>
+            <button
+              type="submit"
+              className="group inline-flex items-center gap-2.5 px-7 py-3.5 bg-text-primary text-white font-medium rounded-full transition-all duration-300 hover:bg-accent hover:shadow-xl hover:shadow-accent/20 hover:-translate-y-0.5"
             >
-              {/* Icon */}
-              <div className="w-12 h-12 flex items-center justify-center rounded-xl mb-5 bg-accent/10 text-accent group-hover:bg-accent/15 transition-colors duration-300">
-                {option.icon}
-              </div>
-
-              {/* Label */}
-              <h3 className="text-lg font-semibold text-text-primary mb-2">
-                {option.label}
-              </h3>
-
-              {/* Status */}
-              <p className="text-text-muted text-xs">
-                Connect
-              </p>
-            </a>
-          ))}
+              Send Message
+              <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </section>
