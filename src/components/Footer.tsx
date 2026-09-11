@@ -28,65 +28,72 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-white">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* Brand */}
-          <div>
-            <a href="#home" className="text-xl font-bold text-text-primary tracking-tight">
-              C<span className="text-accent">.</span>
-            </a>
-            <p className="mt-1 text-text-primary font-medium">Chaitanya</p>
-            <p className="mt-2 text-text-muted text-sm leading-relaxed max-w-xs">
-              Building a cleaner, brighter tomorrow with code.
-            </p>
-          </div>
+    <footer className="relative bg-[#0F172A] overflow-hidden">
+      {/* Gradient atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-br from-accent/[0.06] via-transparent to-violet/[0.06] pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-[400px] h-[200px] bg-accent/[0.04] rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[200px] bg-violet/[0.04] rounded-full blur-[100px] pointer-events-none" />
 
-          {/* Navigation */}
-          <div>
-            <h4 className="text-sm font-semibold text-text-primary mb-4">Navigation</h4>
-            <ul className="space-y-2.5">
-              {footerLinks.map((link) => (
-                <li key={link.href}>
+      <div className="relative border-t border-slate-800/50">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 py-14">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {/* Brand */}
+            <div>
+              <a href="#home" className="text-xl font-bold text-white tracking-tight">
+                C<span className="text-gradient-blue">.</span>
+              </a>
+              <p className="mt-1 text-slate-300 font-medium">Chaitanya</p>
+              <p className="mt-3 text-slate-400 text-sm leading-relaxed max-w-xs">
+                Building a cleaner, brighter tomorrow with code.
+              </p>
+            </div>
+
+            {/* Navigation */}
+            <div>
+              <h4 className="text-sm font-semibold text-slate-200 mb-4">Navigation</h4>
+              <ul className="space-y-2.5">
+                {footerLinks.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      className="text-sm text-slate-400 hover:text-white transition-colors duration-200"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Social */}
+            <div>
+              <h4 className="text-sm font-semibold text-slate-200 mb-4">Connect</h4>
+              <div className="flex items-center gap-3">
+                {socialLinks.map((link) => (
                   <a
+                    key={link.label}
                     href={link.href}
-                    className="text-sm text-text-muted hover:text-text-primary transition-colors duration-200"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-800/80 border border-slate-700/50 text-slate-400 hover:text-white hover:border-accent/40 hover:bg-accent/10 transition-all duration-200"
+                    aria-label={link.label}
                   >
-                    {link.label}
+                    {link.icon}
                   </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Social */}
-          <div>
-            <h4 className="text-sm font-semibold text-text-primary mb-4">Connect</h4>
-            <div className="flex items-center gap-3">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 flex items-center justify-center rounded-lg bg-bg-secondary border border-border text-text-muted hover:text-accent hover:border-accent/30 hover:bg-accent/5 transition-all duration-200"
-                  aria-label={link.label}
-                >
-                  {link.icon}
-                </a>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Bottom bar */}
-        <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-text-muted text-xs">
-            &copy; {new Date().getFullYear()} Chaitanya Bhambere. All rights reserved.
-          </p>
-          <p className="text-text-muted text-xs">
-            Built with passion and purpose
-          </p>
+          {/* Bottom bar */}
+          <div className="mt-10 pt-6 border-t border-slate-800/50 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-slate-500 text-xs">
+              &copy; {new Date().getFullYear()} Chaitanya Bhambere. All rights reserved.
+            </p>
+            <p className="text-slate-500 text-xs">
+              Built with passion and purpose
+            </p>
+          </div>
         </div>
       </div>
     </footer>

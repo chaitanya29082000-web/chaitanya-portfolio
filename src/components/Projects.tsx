@@ -44,32 +44,54 @@ const projects: Project[] = [
 function ProjectVisual({ type }: { type: 'careerpilot' | 'jaldrishti' | 'apforge' }) {
   if (type === 'careerpilot') {
     return (
-      <div className="relative w-full h-full bg-gradient-to-br from-accent/8 via-white to-indigo-50 overflow-hidden">
+      <div className="relative w-full h-full overflow-hidden bg-gradient-to-br from-violet/15 via-indigo-50/60 to-cyan/8">
         <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-accent/8 rounded-full blur-3xl" />
-          <svg className="absolute inset-0 w-full h-full opacity-[0.06]" viewBox="0 0 400 300">
-            <path d="M120 120 C200 80 280 80 320 120" stroke="currentColor" strokeWidth="1.5" fill="none" strokeDasharray="4 4" className="text-accent" />
-            <path d="M120 180 C200 220 280 220 320 180" stroke="currentColor" strokeWidth="1.5" fill="none" strokeDasharray="4 4" className="text-accent" />
-            <circle cx="120" cy="120" r="4" className="text-accent" fill="currentColor" opacity="0.3" />
-            <circle cx="320" cy="120" r="4" className="text-accent" fill="currentColor" opacity="0.3" />
-            <circle cx="120" cy="180" r="4" className="text-accent" fill="currentColor" opacity="0.3" />
-            <circle cx="320" cy="180" r="4" className="text-accent" fill="currentColor" opacity="0.3" />
+          <div className="absolute top-[10%] left-[8%] w-72 h-72 bg-violet/12 rounded-full blur-3xl" />
+          <div className="absolute bottom-[10%] right-[10%] w-56 h-56 bg-accent/10 rounded-full blur-3xl" />
+          <svg className="absolute inset-0 w-full h-full opacity-[0.15]" viewBox="0 0 400 300">
+            <path d="M60 90 C120 50 200 50 260 80 C300 95 340 110 380 100" stroke="currentColor" strokeWidth="2.5" fill="none" strokeDasharray="8 5" className="text-violet" />
+            <path d="M20 180 C80 140 160 140 220 170 C260 185 320 200 380 190" stroke="currentColor" strokeWidth="2.5" fill="none" strokeDasharray="8 5" className="text-accent" />
+            <path d="M40 230 C100 210 180 210 240 230 C280 240 340 250 380 240" stroke="currentColor" strokeWidth="1.5" fill="none" className="text-cyan" />
+            <circle cx="60" cy="90" r="6" className="text-violet" fill="currentColor" opacity="0.4" />
+            <circle cx="260" cy="80" r="6" className="text-violet" fill="currentColor" opacity="0.4" />
+            <circle cx="380" cy="100" r="6" className="text-violet" fill="currentColor" opacity="0.3" />
+            <circle cx="20" cy="180" r="5" className="text-accent" fill="currentColor" opacity="0.3" />
+            <circle cx="220" cy="170" r="5" className="text-accent" fill="currentColor" opacity="0.3" />
+            <circle cx="380" cy="190" r="5" className="text-accent" fill="currentColor" opacity="0.3" />
+            <rect x="80" y="55" width="100" height="70" rx="8" stroke="currentColor" strokeWidth="1.5" className="text-violet" fill="none" opacity="0.2" />
+            <rect x="85" y="62" width="40" height="6" rx="3" fill="currentColor" className="text-violet" opacity="0.12" />
+            <rect x="85" y="74" width="70" height="4" rx="2" fill="currentColor" className="text-violet" opacity="0.08" />
+            <rect x="85" y="84" width="55" height="4" rx="2" fill="currentColor" className="text-violet" opacity="0.08" />
+            <rect x="85" y="94" width="85" height="4" rx="2" fill="currentColor" className="text-violet" opacity="0.08" />
+            <rect x="240" y="155" width="110" height="75" rx="8" stroke="currentColor" strokeWidth="1.5" className="text-accent" fill="none" opacity="0.2" />
+            <rect x="248" y="165" width="35" height="35" rx="6" fill="currentColor" className="text-accent" opacity="0.1" />
+            <rect x="290" y="165" width="50" height="6" rx="3" fill="currentColor" className="text-accent" opacity="0.08" />
+            <rect x="290" y="177" width="40" height="4" rx="2" fill="currentColor" className="text-accent" opacity="0.06" />
+            <rect x="248" y="210" width="95" height="4" rx="2" fill="currentColor" className="text-accent" opacity="0.06" />
+            <circle cx="200" cy="150" r="10" className="text-violet" fill="currentColor" opacity="0.08" />
           </svg>
-          <div className="absolute bottom-[28%] left-[25%] flex items-center gap-3">
-            <div className="w-32 h-2 bg-accent/10 rounded-full overflow-hidden">
-              <div className="w-3/4 h-full bg-accent/25 rounded-full" />
+          <div className="absolute top-[15%] left-[55%] flex items-center gap-3 px-4 py-2.5 bg-white/50 backdrop-blur-sm rounded-xl border border-violet/15 shadow-sm">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet/30 to-accent/30 flex items-center justify-center">
+              <svg className="w-4 h-4 text-violet/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
             </div>
-            <span className="text-accent/30 text-xs font-mono">87%</span>
+            <div>
+              <div className="w-20 h-1.5 bg-violet/20 rounded-full" />
+              <div className="w-14 h-1 bg-violet/10 rounded-full mt-1.5" />
+            </div>
           </div>
-          <div className="absolute top-[20%] left-[22%] text-accent/15">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-              <path d="M14 2v6h6" />
-              <line x1="9" y1="13" x2="15" y2="13" />
-              <line x1="9" y1="17" x2="13" y2="17" />
-            </svg>
+          <div className="absolute bottom-[18%] left-[12%] flex items-center gap-3 px-4 py-2.5 bg-white/50 backdrop-blur-sm rounded-xl border border-accent/15 shadow-sm">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent/30 to-cyan/30 flex items-center justify-center">
+              <svg className="w-4 h-4 text-accent/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5" />
+              </svg>
+            </div>
+            <div className="w-28 h-3 bg-white/60 rounded-full overflow-hidden">
+              <div className="w-3/4 h-full bg-gradient-to-r from-accent/35 to-violet/35 rounded-full" />
+            </div>
+            <span className="text-accent/50 text-[10px] font-mono font-bold">87%</span>
           </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-accent/20 rounded-full border border-accent/15" />
         </div>
       </div>
     )
@@ -77,45 +99,90 @@ function ProjectVisual({ type }: { type: 'careerpilot' | 'jaldrishti' | 'apforge
 
   if (type === 'jaldrishti') {
     return (
-      <div className="relative w-full h-full bg-gradient-to-br from-blue-50 via-white to-cyan-50 overflow-hidden">
+      <div className="relative w-full h-full overflow-hidden bg-gradient-to-br from-cyan/12 via-blue-50/50 to-accent/8">
         <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-blue-400/8 rounded-full blur-3xl" />
-          <svg className="absolute inset-0 w-full h-full opacity-[0.06]" viewBox="0 0 400 300">
-            <line x1="200" y1="150" x2="80" y2="60" stroke="currentColor" strokeWidth="1" className="text-blue-500" />
-            <line x1="200" y1="150" x2="320" y2="50" stroke="currentColor" strokeWidth="1" className="text-blue-500" />
-            <line x1="200" y1="150" x2="350" y2="200" stroke="currentColor" strokeWidth="1" className="text-blue-500" />
-            <line x1="200" y1="150" x2="60" y2="230" stroke="currentColor" strokeWidth="1" className="text-blue-500" />
-            <line x1="200" y1="150" x2="200" y2="30" stroke="currentColor" strokeWidth="1" className="text-blue-500" />
-            <line x1="200" y1="150" x2="300" y2="280" stroke="currentColor" strokeWidth="1" className="text-blue-500" />
+          <div className="absolute top-[10%] right-[10%] w-64 h-64 bg-cyan/12 rounded-full blur-3xl" />
+          <div className="absolute bottom-[15%] left-[10%] w-52 h-52 bg-accent/8 rounded-full blur-3xl" />
+          <svg className="absolute inset-0 w-full h-full opacity-[0.14]" viewBox="0 0 400 300">
+            <line x1="200" y1="150" x2="60" y2="45" stroke="currentColor" strokeWidth="2" className="text-cyan" />
+            <line x1="200" y1="150" x2="340" y2="40" stroke="currentColor" strokeWidth="2" className="text-accent" />
+            <line x1="200" y1="150" x2="360" y2="210" stroke="currentColor" strokeWidth="2" className="text-cyan" />
+            <line x1="200" y1="150" x2="50" y2="240" stroke="currentColor" strokeWidth="2" className="text-accent" />
+            <line x1="200" y1="150" x2="200" y2="25" stroke="currentColor" strokeWidth="2" className="text-violet" />
+            <line x1="200" y1="150" x2="310" y2="270" stroke="currentColor" strokeWidth="1.5" className="text-cyan" />
+            <line x1="200" y1="150" x2="100" y2="275" stroke="currentColor" strokeWidth="1.5" className="text-violet" />
+            <circle cx="60" cy="45" r="7" className="text-cyan" fill="currentColor" opacity="0.25" />
+            <circle cx="340" cy="40" r="7" className="text-accent" fill="currentColor" opacity="0.25" />
+            <circle cx="200" cy="25" r="7" className="text-violet" fill="currentColor" opacity="0.25" />
+            <circle cx="360" cy="210" r="5" className="text-cyan" fill="currentColor" opacity="0.2" />
+            <circle cx="50" cy="240" r="5" className="text-accent" fill="currentColor" opacity="0.2" />
+            <circle cx="310" cy="270" r="5" className="text-cyan" fill="currentColor" opacity="0.15" />
+            <circle cx="100" cy="275" r="5" className="text-violet" fill="currentColor" opacity="0.15" />
+            <circle cx="200" cy="150" r="12" className="text-cyan" fill="currentColor" opacity="0.1" />
+            <circle cx="200" cy="150" r="20" stroke="currentColor" strokeWidth="1.5" className="text-cyan" fill="none" opacity="0.12" />
+            <circle cx="200" cy="150" r="32" stroke="currentColor" strokeWidth="1" className="text-accent" fill="none" opacity="0.06" />
+            <rect x="30" y="70" width="80" height="50" rx="6" stroke="currentColor" strokeWidth="1.5" className="text-cyan" fill="none" opacity="0.15" />
+            <rect x="38" y="80" width="25" height="25" rx="4" fill="currentColor" className="text-cyan" opacity="0.08" />
+            <rect x="68" y="80" width="35" height="5" rx="2.5" fill="currentColor" className="text-cyan" opacity="0.06" />
+            <rect x="68" y="90" width="28" height="3" rx="1.5" fill="currentColor" className="text-cyan" opacity="0.05" />
+            <rect x="290" y="195" width="80" height="50" rx="6" stroke="currentColor" strokeWidth="1.5" className="text-accent" fill="none" opacity="0.15" />
+            <rect x="298" y="205" width="60" height="4" rx="2" fill="currentColor" className="text-accent" opacity="0.06" />
+            <rect x="298" y="214" width="45" height="3" rx="1.5" fill="currentColor" className="text-accent" opacity="0.05" />
+            <rect x="298" y="222" width="55" height="3" rx="1.5" fill="currentColor" className="text-accent" opacity="0.05" />
           </svg>
-          <div className="absolute top-[20%] left-[20%] w-2.5 h-2.5 bg-blue-400/30 rounded-full" />
-          <div className="absolute top-[17%] right-[20%] w-2 h-2 bg-blue-300/25 rounded-full" />
-          <div className="absolute bottom-[30%] right-[12%] w-2.5 h-2.5 bg-blue-400/20 rounded-full" />
-          <div className="absolute bottom-[23%] left-[15%] w-2 h-2 bg-blue-400/25 rounded-full" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-blue-400/25 rounded-full border border-blue-400/20" />
+          <div className="absolute top-[12%] left-[10%] w-5 h-5 bg-cyan/30 rounded-full" />
+          <div className="absolute top-[10%] right-[12%] w-4 h-4 bg-accent/25 rounded-full" />
+          <div className="absolute bottom-[20%] right-[12%] w-5 h-5 bg-violet/20 rounded-full" />
+          <div className="absolute bottom-[22%] left-[15%] w-3.5 h-3.5 bg-cyan/20 rounded-full" />
+          <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-cyan/15 rounded-full border-2 border-cyan/15" />
+          <div className="absolute top-[8%] left-[45%] flex items-center gap-2 px-3 py-2 bg-white/50 backdrop-blur-sm rounded-lg border border-cyan/15 shadow-sm">
+            <div className="w-6 h-6 rounded-md bg-gradient-to-br from-cyan/30 to-accent/30 flex items-center justify-center">
+              <svg className="w-3 h-3 text-cyan/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+              </svg>
+            </div>
+            <div className="w-16 h-1.5 bg-cyan/20 rounded-full" />
+          </div>
         </div>
       </div>
     )
   }
 
   return (
-    <div className="relative w-full h-full bg-gradient-to-br from-violet-50 via-white to-indigo-50 overflow-hidden">
+    <div className="relative w-full h-full overflow-hidden bg-gradient-to-br from-amber-50/80 via-orange-50/40 to-violet/5">
       <div className="absolute inset-0">
+        <div className="absolute top-[10%] left-[15%] w-60 h-60 bg-amber-400/12 rounded-full blur-3xl" />
+        <div className="absolute bottom-[10%] right-[15%] w-48 h-48 bg-orange-400/8 rounded-full blur-3xl" />
         <div
-          className="absolute inset-0 opacity-[0.04]"
+          className="absolute inset-0 opacity-[0.06]"
           style={{
-            backgroundImage: `linear-gradient(rgba(139,92,246,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(139,92,246,0.4) 1px, transparent 1px)`,
-            backgroundSize: '40px 40px',
+            backgroundImage: `linear-gradient(rgba(245,158,11,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(245,158,11,0.5) 1px, transparent 1px)`,
+            backgroundSize: '32px 32px',
           }}
         />
-        <div className="absolute top-[25%] left-[15%] space-y-2.5">
-          <div className="w-28 h-1.5 bg-violet-400/10 rounded-full" />
-          <div className="w-18 h-1.5 bg-violet-400/6 rounded-full" />
-          <div className="w-22 h-1.5 bg-violet-400/8 rounded-full" />
+        <div className="absolute top-[15%] left-[10%] space-y-3">
+          <div className="w-44 h-3 bg-amber-400/15 rounded-full" />
+          <div className="w-32 h-2.5 bg-amber-400/10 rounded-full" />
+          <div className="w-38 h-2.5 bg-amber-400/12 rounded-full" />
+          <div className="w-24 h-2 bg-amber-400/8 rounded-full" />
         </div>
-        <div className="absolute bottom-[30%] left-1/2 -translate-x-1/2 w-48 h-32 bg-violet-400/5 rounded-xl blur-xl" />
-        <div className="absolute bottom-[25%] right-[20%] text-violet-400/10 text-4xl font-mono select-none">
+        <div className="absolute top-[12%] right-[10%] text-amber-500/20 text-6xl font-mono font-bold select-none leading-none">
           {'{ }'}
+        </div>
+        <div className="absolute bottom-[20%] left-[50%] -translate-x-1/2 w-56 h-36 bg-amber-400/6 rounded-2xl blur-xl" />
+        <div className="absolute bottom-[15%] left-[10%] space-y-2">
+          <div className="w-28 h-2 bg-amber-400/10 rounded-full" />
+          <div className="w-36 h-2 bg-amber-400/8 rounded-full" />
+          <div className="w-20 h-2 bg-amber-400/10 rounded-full" />
+        </div>
+        <div className="absolute bottom-[12%] right-[12%] flex items-center gap-3 px-4 py-2.5 bg-white/50 backdrop-blur-sm rounded-xl border border-amber-400/15 shadow-sm">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400/30 to-orange-400/30 flex items-center justify-center">
+            <span className="text-amber-600/70 text-sm font-mono font-bold">{'/>'}</span>
+          </div>
+          <div className="space-y-1.5">
+            <div className="w-20 h-1.5 bg-amber-400/20 rounded-full" />
+            <div className="w-14 h-1 bg-amber-400/12 rounded-full" />
+          </div>
         </div>
       </div>
     </div>
@@ -124,13 +191,19 @@ function ProjectVisual({ type }: { type: 'careerpilot' | 'jaldrishti' | 'apforge
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
-    <article className="group relative bg-white border border-border rounded-2xl overflow-hidden hover:border-accent/30 hover:shadow-xl hover:shadow-accent/5 transition-all duration-300 hover:-translate-y-1">
+    <article className="group relative bg-white border border-border/60 rounded-2xl overflow-hidden card-shadow-lg hover:card-shadow-hover hover:border-accent/20 transition-all duration-300 hover:-translate-y-1.5">
       {/* Visual area */}
-      <div className="relative h-52 sm:h-56 overflow-hidden">
-        <div className="transition-transform duration-500 group-hover:scale-105">
+      <div className="relative h-56 sm:h-64 overflow-hidden">
+        <div className="h-full transition-transform duration-500 group-hover:scale-105">
           <ProjectVisual type={project.visual} />
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white via-white/60 to-transparent" />
+        {/* Arrow button */}
+        <div className="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm border border-border/50 rounded-xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-0 translate-x-2">
+          <svg className="w-4 h-4 text-text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+          </svg>
+        </div>
       </div>
 
       {/* Content */}
@@ -156,7 +229,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             {project.technologies.map((tech) => (
               <span
                 key={tech}
-                className="px-2.5 py-1 text-xs font-medium text-text-muted bg-bg-secondary border border-border rounded-md"
+                className="px-2.5 py-1 text-xs font-medium text-text-muted bg-bg-secondary/80 border border-border/40 rounded-lg"
               >
                 {tech}
               </span>
@@ -193,7 +266,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-white bg-accent hover:bg-accent-light px-4 py-2 rounded-lg transition-all duration-200 hover:shadow-md hover:shadow-accent/20"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-white bg-gradient-blue px-4 py-2 rounded-lg transition-all duration-200 hover:shadow-md hover:shadow-accent/20"
               aria-label={`${project.name} live demo`}
             >
               Live Demo
@@ -206,7 +279,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       </div>
 
       {/* Index number */}
-      <div className="absolute top-4 left-5 text-xs font-mono text-text-muted/40">
+      <div className="absolute top-4 left-5 text-xs font-mono text-text-muted/25">
         {String(index + 1).padStart(2, '0')}
       </div>
     </article>
@@ -215,12 +288,17 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 sm:py-32 px-6 bg-bg-secondary/50">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="relative py-24 sm:py-32 px-6 overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-bg-secondary/30 via-bg-primary to-bg-primary pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[600px] h-[500px] bg-accent/[0.02] rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-violet/[0.02] rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="relative max-w-6xl mx-auto">
         {/* Section header */}
-        <div className="flex items-center justify-between mb-16">
+        <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-4">
-            <span className="text-text-muted text-sm font-mono">02.</span>
+            <span className="text-accent text-sm font-mono font-semibold">02.</span>
             <h2 className="text-3xl md:text-4xl font-bold text-text-primary">
               Featured Projects
             </h2>
@@ -229,7 +307,7 @@ export default function Projects() {
             href="https://github.com/chaitanya29082000-web"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-text-secondary hover:text-accent transition-colors duration-200"
+            className="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-light transition-colors duration-200"
           >
             View All Projects
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">

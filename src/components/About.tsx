@@ -7,6 +7,7 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.1-5.1m0 0L11.42 4.97m-5.1 5.1H21M3 3v18" />
       </svg>
     ),
+    color: 'bg-accent/8 text-accent border-accent/15',
   },
   {
     title: 'Full-Stack Enthusiast',
@@ -16,6 +17,7 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
       </svg>
     ),
+    color: 'bg-violet/8 text-violet border-violet/15',
   },
   {
     title: 'Lifelong Learner',
@@ -25,6 +27,7 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
       </svg>
     ),
+    color: 'bg-cyan/8 text-cyan border-cyan/15',
   },
   {
     title: 'Impact Driven',
@@ -34,25 +37,30 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
       </svg>
     ),
+    color: 'bg-accent/8 text-accent border-accent/15',
   },
 ]
 
 export default function About() {
   return (
-    <section id="about" className="py-24 sm:py-32 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="relative py-24 sm:py-32 px-6 overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-bg-primary via-bg-secondary/20 to-bg-primary pointer-events-none" />
+      <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-violet/[0.025] rounded-full blur-[140px] pointer-events-none" />
+
+      <div className="relative max-w-6xl mx-auto">
         {/* Section header */}
-        <div className="flex items-center gap-4 mb-16">
-          <span className="text-text-muted text-sm font-mono">03.</span>
+        <div className="flex items-center gap-4 mb-6">
+          <span className="text-accent text-sm font-mono font-semibold">03.</span>
           <h2 className="text-3xl md:text-4xl font-bold text-text-primary">
             About Me
           </h2>
-          <div className="flex-1 h-px bg-border ml-4" />
+          <div className="flex-1 h-px bg-gradient-to-r from-border via-accent/20 to-border ml-4" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
-          {/* Main text */}
-          <div className="lg:col-span-3">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-12 items-start">
+          {/* Left: Text + Features */}
+          <div className="lg:col-span-3 space-y-6">
             <div className="space-y-5 text-text-secondary text-lg leading-relaxed">
               <p>
                 I am Chaitanya — a developer with a deep interest in building intelligent
@@ -68,35 +76,70 @@ export default function About() {
               </p>
             </div>
 
-            {/* Decorative handwritten note */}
-            <div className="mt-10 inline-flex flex-col gap-1">
-              <span className="text-text-muted text-sm italic tracking-wide">Always Learning</span>
-              <span className="text-text-muted text-sm italic tracking-wide">Always Building</span>
+            {/* Always Learning / Building */}
+            <div className="inline-flex flex-col gap-1.5 px-5 py-4 bg-gradient-to-r from-accent/5 to-violet/5 border border-accent/10 rounded-2xl">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-violet text-sm italic font-semibold tracking-wide">Always Learning</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet to-cyan text-sm italic font-semibold tracking-wide">Always Building</span>
+            </div>
+
+            {/* Feature cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {features.map((feature) => (
+                <div
+                  key={feature.title}
+                  className="group p-5 bg-white border border-border/60 rounded-xl card-shadow hover:card-shadow-hover hover:border-accent/20 transition-all duration-300"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className={`flex-shrink-0 w-11 h-11 flex items-center justify-center rounded-xl border transition-all duration-300 group-hover:scale-110 ${feature.color}`}>
+                      {feature.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-semibold text-text-primary mb-1">
+                        {feature.title}
+                      </h3>
+                      <p className="text-text-muted text-sm leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Feature cards */}
-          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
-            {features.map((feature) => (
-              <div
-                key={feature.title}
-                className="group p-5 bg-white border border-border rounded-xl hover:border-accent/30 hover:shadow-md hover:shadow-accent/5 transition-all duration-300"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-lg bg-accent/10 text-accent group-hover:bg-accent/15 transition-colors duration-300">
-                    {feature.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-semibold text-text-primary mb-1">
-                      {feature.title}
-                    </h3>
-                    <p className="text-text-muted text-sm leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
+          {/* Right: Developer Visual */}
+          <div className="lg:col-span-2 hidden lg:block">
+            <div className="relative mt-2">
+              {/* Glow */}
+              <div className="absolute -inset-10 bg-gradient-to-br from-accent/10 via-violet/8 to-cyan/5 rounded-3xl blur-2xl" />
+
+              {/* Dark code card */}
+              <div className="relative bg-[#0F172A] border border-slate-700/50 rounded-2xl p-6 shadow-xl">
+                <div className="flex items-center gap-2 mb-5">
+                  <span className="w-3 h-3 rounded-full bg-[#FF5F56]" />
+                  <span className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
+                  <span className="w-3 h-3 rounded-full bg-[#27C93F]" />
+                  <span className="ml-2 text-[10px] text-slate-500 font-mono">about.ts</span>
                 </div>
+                <div className="font-mono text-xs leading-[1.9] space-y-1">
+                  <div><span className="text-[#C084FC]">const</span> <span className="text-slate-300">about</span> <span className="text-slate-500">=</span> <span className="text-slate-500">{'{'}</span></div>
+                  <div className="pl-4"><span className="text-[#67E8F9]">passion</span><span className="text-slate-500">:</span> <span className="text-[#86EFAC]">"Building impactful tech"</span><span className="text-slate-500">,</span></div>
+                  <div className="pl-4"><span className="text-[#67E8F9]">focus</span><span className="text-slate-500">:</span> <span className="text-[#86EFAC]">"AI + Web Development"</span><span className="text-slate-500">,</span></div>
+                  <div className="pl-4"><span className="text-[#67E8F9]">status</span><span className="text-slate-500">:</span> <span className="text-[#86EFAC]">"Always Learning"</span><span className="text-slate-500">,</span></div>
+                  <div className="pl-4"><span className="text-[#67E8F9]">tools</span><span className="text-slate-500">:</span> <span className="text-slate-500">[</span></div>
+                  <div className="pl-8"><span className="text-[#86EFAC]">"React"</span><span className="text-slate-500">,</span> <span className="text-[#86EFAC]">"Python"</span><span className="text-slate-500">,</span></div>
+                  <div className="pl-8"><span className="text-[#86EFAC]">"TypeScript"</span></div>
+                  <div className="pl-4"><span className="text-slate-500">]</span></div>
+                  <div><span className="text-slate-500">{'}'}</span></div>
+                </div>
+
+                {/* Decorative elements */}
+                <div className="absolute -top-3 -right-3 w-9 h-9 bg-gradient-to-br from-accent to-violet rounded-lg flex items-center justify-center shadow-lg shadow-accent/20">
+                  <span className="text-white text-xs font-mono font-bold">&lt;/&gt;</span>
+                </div>
+                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-accent/8 to-violet/8 rounded-2xl blur-sm" />
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>
