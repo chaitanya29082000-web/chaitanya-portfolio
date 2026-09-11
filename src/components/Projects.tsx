@@ -191,15 +191,15 @@ function ProjectVisual({ type }: { type: 'careerpilot' | 'jaldrishti' | 'apforge
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
-    <article className="group relative bg-white border border-border/60 rounded-2xl overflow-hidden card-shadow-lg hover:card-shadow-hover hover:border-accent/20 transition-all duration-300 hover:-translate-y-1.5">
+    <article className="group relative bg-white dark:bg-dark-card border border-border/60 dark:border-dark-border rounded-2xl overflow-hidden card-shadow-lg hover:card-shadow-hover hover:border-accent/20 transition-all duration-300 hover:-translate-y-1.5">
       {/* Visual area */}
       <div className="relative h-56 sm:h-64 overflow-hidden">
         <div className="h-full transition-transform duration-500 group-hover:scale-105">
           <ProjectVisual type={project.visual} />
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white via-white/60 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white dark:from-dark-card via-white/60 dark:via-dark-card/60 to-transparent" />
         {/* Arrow button */}
-        <div className="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm border border-border/50 rounded-xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-0 translate-x-2">
+        <div className="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm border border-border/50 dark:border-slate-600/50 rounded-xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-0 translate-x-2">
           <svg className="w-4 h-4 text-text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
           </svg>
@@ -229,7 +229,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             {project.technologies.map((tech) => (
               <span
                 key={tech}
-                className="px-2.5 py-1 text-xs font-medium text-text-muted bg-bg-secondary/80 border border-border/40 rounded-lg"
+                className="px-2.5 py-1 text-xs font-medium text-text-muted bg-bg-secondary/80 dark:bg-slate-700/60 border border-border/40 dark:border-slate-600/40 rounded-lg"
               >
                 {tech}
               </span>
@@ -290,9 +290,9 @@ export default function Projects() {
   return (
     <section id="projects" className="relative py-24 sm:py-32 px-6 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-bg-secondary/30 via-bg-primary to-bg-primary pointer-events-none" />
-      <div className="absolute top-0 right-0 w-[600px] h-[500px] bg-accent/[0.02] rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-violet/[0.02] rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-bg-secondary/30 via-bg-primary to-bg-primary dark:from-dark-surface dark:via-dark-bg dark:to-dark-bg pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[600px] h-[500px] bg-accent/[0.02] dark:bg-accent/[0.04] rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-violet/[0.02] dark:bg-violet/[0.04] rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto">
         {/* Section header */}

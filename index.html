@@ -6,7 +6,8 @@
 
     <title>Chaitanya — Developer Portfolio</title>
     <meta name="description" content="Portfolio of Chaitanya, a developer building modern web applications, exploring AI, and working on meaningful real-world solutions." />
-    <meta name="theme-color" content="#F8FAFC" />
+    <meta name="theme-color" content="#F8FAFC" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#080B14" media="(prefers-color-scheme: dark)" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -28,6 +29,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <script>
+      (function() {
+        var saved = localStorage.getItem('portfolio-theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (theme === 'dark') document.documentElement.classList.add('dark');
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

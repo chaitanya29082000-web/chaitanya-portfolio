@@ -2,8 +2,8 @@ export default function Experience() {
   return (
     <section id="experience" className="relative py-24 sm:py-32 px-6 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-bg-primary via-bg-secondary/20 to-bg-primary pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[500px] h-[300px] bg-accent/[0.02] rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-bg-primary via-bg-secondary/20 to-bg-primary dark:from-dark-bg dark:via-dark-surface/30 dark:to-dark-bg pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[500px] h-[300px] bg-accent/[0.02] dark:bg-accent/[0.04] rounded-full blur-[100px] pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto">
         {/* Section header */}
@@ -16,7 +16,7 @@ export default function Experience() {
         </div>
 
         {/* Card */}
-        <div className="bg-white border border-border/60 rounded-2xl p-8 md:p-12 card-shadow-lg">
+        <div className="bg-white dark:bg-dark-card border border-border/60 dark:border-dark-border rounded-2xl p-8 md:p-12 card-shadow-lg">
           <div className="flex items-start gap-6">
             <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-accent/10 to-violet/10 border border-accent/15 text-accent">
               <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">

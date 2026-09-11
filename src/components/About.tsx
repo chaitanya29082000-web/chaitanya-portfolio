@@ -45,8 +45,8 @@ export default function About() {
   return (
     <section id="about" className="relative py-24 sm:py-32 px-6 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-bg-primary via-bg-secondary/20 to-bg-primary pointer-events-none" />
-      <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-violet/[0.025] rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-bg-primary via-bg-secondary/20 to-bg-primary dark:from-dark-bg dark:via-dark-surface/30 dark:to-dark-bg pointer-events-none" />
+      <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-violet/[0.025] dark:bg-violet/[0.04] rounded-full blur-[140px] pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto">
         {/* Section header */}
@@ -77,7 +77,7 @@ export default function About() {
             </div>
 
             {/* Always Learning / Building */}
-            <div className="inline-flex flex-col gap-1.5 px-5 py-4 bg-gradient-to-r from-accent/5 to-violet/5 border border-accent/10 rounded-2xl">
+            <div className="inline-flex flex-col gap-1.5 px-5 py-4 bg-gradient-to-r from-accent/5 to-violet/5 dark:from-accent/10 dark:to-violet/10 border border-accent/10 dark:border-accent/20 rounded-2xl">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-violet text-sm italic font-semibold tracking-wide">Always Learning</span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet to-cyan text-sm italic font-semibold tracking-wide">Always Building</span>
             </div>
@@ -87,7 +87,7 @@ export default function About() {
               {features.map((feature) => (
                 <div
                   key={feature.title}
-                  className="group p-5 bg-white border border-border/60 rounded-xl card-shadow hover:card-shadow-hover hover:border-accent/20 transition-all duration-300"
+                  className="group p-5 bg-white dark:bg-dark-card border border-border/60 dark:border-dark-border rounded-xl card-shadow hover:card-shadow-hover hover:border-accent/20 transition-all duration-300"
                 >
                   <div className="flex items-start gap-4">
                     <div className={`flex-shrink-0 w-11 h-11 flex items-center justify-center rounded-xl border transition-all duration-300 group-hover:scale-110 ${feature.color}`}>

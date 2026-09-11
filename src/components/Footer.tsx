@@ -28,7 +28,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#0F172A] overflow-hidden">
+    <footer className="relative bg-[#0F172A] dark:bg-[#060911] overflow-hidden">
       {/* Gradient atmosphere */}
       <div className="absolute inset-0 bg-gradient-to-br from-accent/[0.06] via-transparent to-violet/[0.06] pointer-events-none" />
       <div className="absolute top-0 left-1/4 w-[400px] h-[200px] bg-accent/[0.04] rounded-full blur-[100px] pointer-events-none" />
@@ -75,7 +75,7 @@ export default function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-800/80 border border-slate-700/50 text-slate-400 hover:text-white hover:border-accent/40 hover:bg-accent/10 transition-all duration-200"
+                    className="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-800/80 dark:bg-slate-700/60 border border-slate-700/50 dark:border-slate-600/50 text-slate-400 hover:text-white hover:border-accent/40 hover:bg-accent/10 transition-all duration-200"
                     aria-label={link.label}
                   >
                     {link.icon}

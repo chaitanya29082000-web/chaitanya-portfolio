@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import ThemeToggle from './ThemeToggle'
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -50,7 +51,7 @@ export default function Navbar() {
     >
       <div className={`max-w-6xl mx-auto px-6 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/80 backdrop-blur-xl border border-border/50 rounded-2xl shadow-lg shadow-black/[0.03]'
+          ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-border/50 dark:border-slate-700/50 rounded-2xl shadow-lg shadow-black/[0.03] dark:shadow-black/[0.2]'
           : ''
       }`}>
         <div className="h-14 flex items-center justify-between">
@@ -72,7 +73,7 @@ export default function Navbar() {
                   className={`px-4 py-2 text-sm font-medium transition-all duration-200 rounded-full ${
                     activeSection === link.href.slice(1)
                       ? 'text-accent bg-accent/8'
-                      : 'text-text-secondary hover:text-text-primary hover:bg-bg-secondary'
+                      : 'text-text-secondary hover:text-text-primary hover:bg-bg-secondary dark:hover:bg-slate-800'
                   }`}
                   aria-current={activeSection === link.href.slice(1) ? 'page' : undefined}
                 >
@@ -82,8 +83,9 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* CTA + Mobile Hamburger */}
-          <div className="flex items-center gap-3">
+          {/* CTA + Theme Toggle + Mobile Hamburger */}
+          <div className="flex items-center gap-2.5">
+            <ThemeToggle />
             <a
               href="#contact"
               className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white bg-gradient-blue rounded-full transition-all duration-300 hover:bg-gradient-blue-hover hover:shadow-lg hover:shadow-accent/20 hover:-translate-y-0.5"
@@ -97,7 +99,7 @@ export default function Navbar() {
             {/* Mobile Hamburger */}
             <button
               type="button"
-              className="md:hidden flex flex-col gap-1.5 p-2 rounded-xl hover:bg-bg-secondary transition-colors"
+              className="md:hidden flex flex-col gap-1.5 p-2 rounded-xl hover:bg-bg-secondary dark:hover:bg-slate-800 transition-colors"
               onClick={() => setIsOpen(!isOpen)}
               aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
               aria-expanded={isOpen}
@@ -130,7 +132,7 @@ export default function Navbar() {
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="mx-6 mt-2 bg-white/95 backdrop-blur-xl border border-border/50 rounded-2xl shadow-lg px-4 py-3">
+        <div className="mx-6 mt-2 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border border-border/50 dark:border-slate-700/50 rounded-2xl shadow-lg px-4 py-3">
           <ul className="flex flex-col gap-0.5">
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -139,7 +141,7 @@ export default function Navbar() {
                   className={`block py-2.5 text-sm font-medium transition-colors rounded-xl px-4 ${
                     activeSection === link.href.slice(1)
                       ? 'text-accent bg-accent/8'
-                      : 'text-text-secondary hover:text-text-primary hover:bg-bg-secondary'
+                      : 'text-text-secondary hover:text-text-primary hover:bg-bg-secondary dark:hover:bg-slate-800'
                   }`}
                   onClick={() => setIsOpen(false)}
                   aria-current={activeSection === link.href.slice(1) ? 'page' : undefined}
@@ -149,16 +151,19 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <a
-            href="#contact"
-            className="mt-2 mb-1 flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium text-white bg-gradient-blue rounded-xl transition-all duration-300"
-            onClick={() => setIsOpen(false)}
-          >
-            Let's Talk
-            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-            </svg>
-          </a>
+          <div className="mt-2 mb-1 flex items-center gap-2">
+            <ThemeToggle />
+            <a
+              href="#contact"
+              className="flex-1 flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium text-white bg-gradient-blue rounded-xl transition-all duration-300"
+              onClick={() => setIsOpen(false)}
+            >
+              Let's Talk
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </nav>

@@ -53,9 +53,9 @@ export default function Contact() {
   return (
     <section id="contact" className="relative py-24 sm:py-32 px-6 overflow-hidden">
       {/* Background atmosphere */}
-      <div className="absolute inset-0 bg-gradient-to-b from-bg-primary via-accent/[0.02] to-bg-secondary/30 pointer-events-none" />
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-accent/[0.03] rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-violet/[0.02] rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-bg-primary via-accent/[0.02] to-bg-secondary/30 dark:from-dark-bg dark:via-accent/[0.03] dark:to-dark-surface pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-accent/[0.03] dark:bg-accent/[0.05] rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-violet/[0.02] dark:bg-violet/[0.04] rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto">
         {/* Section header */}
@@ -81,7 +81,7 @@ export default function Contact() {
                 href={option.href}
                 target={option.href.startsWith('mailto') ? undefined : '_blank'}
                 rel={option.href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
-                className="group flex items-center gap-4 p-5 bg-white border border-border/60 rounded-xl card-shadow hover:card-shadow-hover hover:border-accent/20 transition-all duration-300"
+                className="group flex items-center gap-4 p-5 bg-white dark:bg-dark-card border border-border/60 dark:border-dark-border rounded-xl card-shadow hover:card-shadow-hover hover:border-accent/20 transition-all duration-300"
               >
                 <div className={`flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-xl border transition-all duration-300 group-hover:scale-110 ${option.color}`}>
                   {option.icon}
@@ -102,7 +102,7 @@ export default function Contact() {
           </div>
 
           {/* Right: Contact form */}
-          <div className="bg-white border border-border/60 rounded-2xl p-6 sm:p-8 card-shadow-lg">
+          <div className="bg-white dark:bg-dark-card border border-border/60 dark:border-dark-border rounded-2xl p-6 sm:p-8 card-shadow-lg">
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-text-primary mb-2">
@@ -115,7 +115,7 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 bg-bg-primary/50 border border-border/60 rounded-xl text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all duration-200"
+                  className="w-full px-4 py-3 bg-bg-primary/50 dark:bg-slate-800/50 border border-border/60 dark:border-slate-600/60 rounded-xl text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all duration-200"
                   placeholder="John Doe"
                 />
               </div>
@@ -130,7 +130,7 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 bg-bg-primary/50 border border-border/60 rounded-xl text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all duration-200"
+                  className="w-full px-4 py-3 bg-bg-primary/50 dark:bg-slate-800/50 border border-border/60 dark:border-slate-600/60 rounded-xl text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all duration-200"
                   placeholder="john@example.com"
                 />
               </div>
@@ -145,7 +145,7 @@ export default function Contact() {
                   rows={5}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 bg-bg-primary/50 border border-border/60 rounded-xl text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all duration-200 resize-none"
+                  className="w-full px-4 py-3 bg-bg-primary/50 dark:bg-slate-800/50 border border-border/60 dark:border-slate-600/60 rounded-xl text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all duration-200 resize-none"
                   placeholder="Tell me about your project or just say hi..."
                 />
               </div>

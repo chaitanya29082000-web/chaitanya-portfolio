@@ -1,11 +1,11 @@
 import CodeVisual from './CodeVisual'
 
 const techStack = [
-  { name: 'React', icon: 'R', color: 'text-cyan bg-cyan/8 border-cyan/15' },
-  { name: 'Next.js', icon: 'N', color: 'text-text-primary bg-text-primary/5 border-text-primary/10' },
-  { name: 'Python', icon: 'P', color: 'text-amber-500 bg-amber-500/8 border-amber-500/15' },
-  { name: 'Node.js', icon: 'No', color: 'text-green-600 bg-green-600/8 border-green-600/15' },
-  { name: 'Git', icon: 'G', color: 'text-orange-500 bg-orange-500/8 border-orange-500/15' },
+  { name: 'React', icon: 'R', color: 'text-cyan bg-cyan/8 border-cyan/15 dark:bg-cyan/10 dark:border-cyan/20' },
+  { name: 'Next.js', icon: 'N', color: 'text-text-primary bg-text-primary/5 border-text-primary/10 dark:bg-slate-700/50 dark:border-slate-600/50 dark:text-slate-200' },
+  { name: 'Python', icon: 'P', color: 'text-amber-500 bg-amber-500/8 border-amber-500/15 dark:bg-amber-500/10 dark:border-amber-500/20' },
+  { name: 'Node.js', icon: 'No', color: 'text-green-600 bg-green-600/8 border-green-600/15 dark:text-green-400 dark:bg-green-500/10 dark:border-green-500/20' },
+  { name: 'Git', icon: 'G', color: 'text-orange-500 bg-orange-500/8 border-orange-500/15 dark:bg-orange-500/10 dark:border-orange-500/20' },
 ]
 
 export default function Hero() {
@@ -16,21 +16,21 @@ export default function Hero() {
     >
       {/* Background layers */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-bg-primary to-bg-secondary/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-bg-primary to-bg-secondary/50 dark:from-dark-bg dark:via-dark-surface dark:to-dark-bg" />
         {/* Layered ambient glows */}
-        <div className="absolute top-[5%] right-[10%] w-[800px] h-[600px] bg-accent/[0.04] rounded-full blur-[160px]" />
-        <div className="absolute bottom-[20%] left-[5%] w-[600px] h-[500px] bg-violet/[0.04] rounded-full blur-[140px]" />
-        <div className="absolute top-[50%] left-[30%] w-[500px] h-[400px] bg-cyan/[0.03] rounded-full blur-[120px]" />
+        <div className="absolute top-[5%] right-[10%] w-[800px] h-[600px] bg-accent/[0.04] dark:bg-accent/[0.06] rounded-full blur-[160px]" />
+        <div className="absolute bottom-[20%] left-[5%] w-[600px] h-[500px] bg-violet/[0.04] dark:bg-violet/[0.06] rounded-full blur-[140px]" />
+        <div className="absolute top-[50%] left-[30%] w-[500px] h-[400px] bg-cyan/[0.03] dark:bg-cyan/[0.05] rounded-full blur-[120px]" />
         {/* Decorative dots */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-[18%] left-[6%] w-2 h-2 bg-accent/20 rounded-full" />
-          <div className="absolute top-[12%] right-[15%] w-1.5 h-1.5 bg-violet/20 rounded-full" />
-          <div className="absolute bottom-[30%] left-[12%] w-1.5 h-1.5 bg-cyan/15 rounded-full" />
-          <div className="absolute bottom-[35%] right-[8%] w-2 h-2 bg-accent/15 rounded-full" />
-          <div className="absolute top-[50%] left-[3%] w-1 h-1 bg-violet/15 rounded-full" />
-          <div className="absolute top-[65%] right-[5%] w-2.5 h-2.5 bg-accent/[0.07] rounded-full" />
-          <div className="absolute top-[40%] left-[25%] w-1 h-1 bg-violet/10 rounded-full" />
-          <div className="absolute top-[25%] left-[40%] w-1.5 h-1.5 bg-cyan/10 rounded-full" />
+          <div className="absolute top-[18%] left-[6%] w-2 h-2 bg-accent/20 dark:bg-accent/30 rounded-full" />
+          <div className="absolute top-[12%] right-[15%] w-1.5 h-1.5 bg-violet/20 dark:bg-violet/30 rounded-full" />
+          <div className="absolute bottom-[30%] left-[12%] w-1.5 h-1.5 bg-cyan/15 dark:bg-cyan/25 rounded-full" />
+          <div className="absolute bottom-[35%] right-[8%] w-2 h-2 bg-accent/15 dark:bg-accent/25 rounded-full" />
+          <div className="absolute top-[50%] left-[3%] w-1 h-1 bg-violet/15 dark:bg-violet/25 rounded-full" />
+          <div className="absolute top-[65%] right-[5%] w-2.5 h-2.5 bg-accent/[0.07] dark:bg-accent/[0.12] rounded-full" />
+          <div className="absolute top-[40%] left-[25%] w-1 h-1 bg-violet/10 dark:bg-violet/20 rounded-full" />
+          <div className="absolute top-[25%] left-[40%] w-1.5 h-1.5 bg-cyan/10 dark:bg-cyan/20 rounded-full" />
         </div>
       </div>
 
@@ -41,7 +41,7 @@ export default function Hero() {
             {/* Left: Text */}
             <div className="max-w-xl">
               {/* Hello pill */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-border/60 rounded-full mb-6 card-shadow animate-[fadeInUp_0.6s_ease-out_forwards] opacity-0">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-border/60 dark:border-slate-700/60 rounded-full mb-6 card-shadow animate-[fadeInUp_0.6s_ease-out_forwards] opacity-0">
                 <span className="text-base">👋</span>
                 <span className="text-sm font-medium text-text-secondary">Hello, I'm</span>
               </div>
@@ -80,7 +80,7 @@ export default function Hero() {
                 <a
                   href="/resume.pdf"
                   download
-                  className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-white border border-border text-text-secondary font-medium rounded-full transition-all duration-300 hover:border-accent/40 hover:text-accent hover:shadow-md hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-white dark:bg-slate-800 border border-border dark:border-slate-700 text-text-secondary font-medium rounded-full transition-all duration-300 hover:border-accent/40 hover:text-accent hover:shadow-md hover:-translate-y-0.5"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
@@ -107,7 +107,7 @@ export default function Hero() {
                 key={tech.name}
                 className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 hover:scale-105 ${tech.color}`}
               >
-                <span className="w-6 h-6 flex items-center justify-center text-[10px] font-bold bg-white/80 rounded-md border border-current/10">
+                <span className="w-6 h-6 flex items-center justify-center text-[10px] font-bold bg-white/80 dark:bg-slate-700/80 rounded-md border border-current/10">
                   {tech.icon}
                 </span>
                 <span className="text-xs font-semibold">{tech.name}</span>

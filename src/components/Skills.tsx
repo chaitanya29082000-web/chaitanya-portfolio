@@ -72,8 +72,8 @@ export default function Skills() {
   return (
     <section id="skills" className="relative py-24 sm:py-32 px-6 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-bg-primary via-accent/[0.015] to-bg-primary pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-violet/[0.025] rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-bg-primary via-accent/[0.015] to-bg-primary dark:from-dark-bg dark:via-accent/[0.025] dark:to-dark-bg pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-violet/[0.025] dark:bg-violet/[0.04] rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto">
         {/* Section header */}
@@ -95,7 +95,7 @@ export default function Skills() {
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="group relative flex flex-col items-center gap-3.5 p-6 bg-white border border-border/60 rounded-2xl card-shadow hover:card-shadow-hover hover:border-accent/20 transition-all duration-300 hover:-translate-y-0.5"
+              className="group relative flex flex-col items-center gap-3.5 p-6 bg-white dark:bg-dark-card border border-border/60 dark:border-dark-border rounded-2xl card-shadow hover:card-shadow-hover hover:border-accent/20 transition-all duration-300 hover:-translate-y-0.5"
             >
               {/* Icon */}
               <div className={`w-14 h-14 flex items-center justify-center rounded-xl border transition-all duration-300 group-hover:scale-110 ${skill.bg} ${skill.border} ${skill.color}`}>
