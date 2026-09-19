@@ -2,6 +2,7 @@ const footerLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Skills', href: '#skills' },
   { label: 'Learning Journey', href: '#journey' },
   { label: 'Achievements', href: '#achievements' },
   { label: 'Contact', href: '#contact' },

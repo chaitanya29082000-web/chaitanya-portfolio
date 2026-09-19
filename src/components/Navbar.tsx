@@ -50,11 +50,14 @@ export default function Navbar() {
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className={`max-w-6xl mx-auto px-4 sm:px-6 transition-all duration-300 ${
+      <div className={`relative max-w-6xl mx-auto px-4 sm:px-6 transition-all duration-300 ${
         scrolled
           ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-border/50 dark:border-slate-700/50 rounded-2xl shadow-lg shadow-black/[0.03] dark:shadow-black/[0.2]'
           : ''
       }`}>
+        {scrolled && (
+          <div className="absolute -top-px left-8 right-8 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" aria-hidden="true" />
+        )}
         <div className="h-14 flex items-center justify-between">
           {/* Logo */}
           <a

@@ -45,17 +45,22 @@ function EmptyState({ message }: { message: string }) {
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="py-24 sm:py-32 px-6">
-      <div className="max-w-4xl mx-auto">
+    <section id="achievements" className="relative py-24 sm:py-32 px-6 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-bg-primary via-accent/[0.015] to-bg-primary dark:from-dark-bg dark:via-accent/[0.025] dark:to-dark-bg pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[400px] bg-accent/[0.025] dark:bg-accent/[0.04] rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="relative max-w-4xl mx-auto">
         {/* Section header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
+        <div className="flex items-center gap-4 mb-6">
+          <span className="text-accent text-sm font-mono font-semibold">07.</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-text-primary">
             Achievements
           </h2>
-          <p className="text-text-secondary text-lg max-w-xl mx-auto">
-            Milestones, hackathons, and accomplishments.
-          </p>
+          <div className="flex-1 h-px bg-gradient-to-r from-border via-accent/20 to-border ml-4" />
         </div>
+        <p className="text-text-secondary text-lg max-w-2xl mb-12 leading-relaxed">
+          Milestones, hackathons, and accomplishments.
+        </p>
 
         {/* Achievements subsection */}
         <div className="mb-12">
@@ -150,7 +155,10 @@ export default function Achievements() {
                       {item.description}
                     </p>
                     {item.result && (
-                      <span className="inline-flex items-center px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/30 rounded-full">
+                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z" />
+                        </svg>
                         {item.result}
                       </span>
                     )}
