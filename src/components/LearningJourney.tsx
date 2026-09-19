@@ -2,9 +2,10 @@ const journeyItems = [
   {
     icon: '💻',
     title: 'DSA Practice',
-    description: 'Solving data structures and algorithms problems in C++ to strengthen problem-solving fundamentals.',
-    tag: 'Ongoing',
-    tagColor: 'bg-blue-500/15 text-blue-600 dark:text-blue-400 border-blue-500/20',
+    description: 'Solving data structures and algorithms problems in C++ daily to strengthen problem-solving fundamentals.',
+    tag: 'Current Focus',
+    tagColor: 'bg-accent/15 text-accent border-accent/25',
+    current: true,
   },
   {
     icon: '🛠️',
@@ -12,6 +13,7 @@ const journeyItems = [
     description: 'Building real projects with React, TypeScript, and modern web tools to apply what I learn in class.',
     tag: 'Active',
     tagColor: 'bg-green-500/15 text-green-600 dark:text-green-400 border-green-500/20',
+    current: false,
   },
   {
     icon: '🤖',
@@ -19,6 +21,7 @@ const journeyItems = [
     description: 'Learning machine learning concepts and experimenting with AI tools and APIs in personal projects.',
     tag: 'Learning',
     tagColor: 'bg-violet-500/15 text-violet-600 dark:text-violet-400 border-violet-500/20',
+    current: false,
   },
   {
     icon: '🏆',
@@ -26,6 +29,7 @@ const journeyItems = [
     description: 'Participating in hackathons to build under pressure, collaborate, and ship functional projects fast.',
     tag: 'Events',
     tagColor: 'bg-amber-500/15 text-amber-600 dark:text-amber-400 border-amber-500/20',
+    current: false,
   },
   {
     icon: '🎯',
@@ -33,6 +37,7 @@ const journeyItems = [
     description: 'Preparing for software engineering internships through DSA, system design basics, and project work.',
     tag: 'Planning',
     tagColor: 'bg-cyan-500/15 text-cyan-600 dark:text-cyan-400 border-cyan-500/20',
+    current: false,
   },
 ]
 
@@ -56,25 +61,60 @@ export default function LearningJourney() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {journeyItems.map((item) => (
-            <div
-              key={item.title}
-              className="group relative flex items-start gap-4 p-6 bg-white dark:bg-dark-card border border-border/60 dark:border-dark-border rounded-2xl card-shadow hover:card-shadow-hover hover:border-accent/20 transition-all duration-300 hover:-translate-y-1"
-            >
-              <div className="text-3xl shrink-0" aria-hidden="true">{item.icon}</div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-3 mb-2 flex-wrap">
-                  <h3 className="font-display text-lg font-semibold text-text-primary">{item.title}</h3>
-                  <span className={`text-xs px-2.5 py-0.5 rounded-full border font-medium ${item.tagColor}`}>
-                    {item.tag}
-                  </span>
+        <div className="relative">
+          {/* Connecting line */}
+          <div
+            className="absolute left-[26px] sm:left-[30px] top-2 bottom-2 w-0.5 bg-gradient-to-b from-accent/40 via-accent/15 to-accent/40 rounded-full"
+            aria-hidden="true"
+          />
+
+          <ol className="space-y-5">
+            {journeyItems.map((item, index) => (
+              <li
+                key={item.title}
+                className="relative flex items-start gap-5 sm:gap-7"
+              >
+                {/* Step node */}
+                <div className="relative z-10 shrink-0">
+                  <div
+                    className={`group flex items-center justify-center w-[52px] h-[52px] sm:w-[60px] sm:h-[60px] rounded-full border font-mono text-sm sm:text-base font-semibold transition-all duration-300 ${
+                      item.current
+                        ? 'bg-accent/10 text-accent border-accent/40 shadow-lg shadow-accent/20'
+                        : 'bg-white dark:bg-dark-card text-text-secondary border-border dark:border-dark-border shadow-sm group-hover:border-accent/30 group-hover:text-accent'
+                    }`}
+                  >
+                    {String(index + 1).padStart(2, '0')}
+                  </div>
                 </div>
-                <p className="text-text-secondary text-sm leading-relaxed">{item.description}</p>
-              </div>
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-blue rounded-full group-hover:w-10 transition-all duration-300" />
-            </div>
-          ))}
+
+                {/* Card content */}
+                <div
+                  className={`flex-1 min-w-0 rounded-2xl p-6 sm:p-7 transition-all duration-300 ${
+                    item.current
+                      ? 'bg-accent/[0.04] dark:bg-accent/[0.05] border border-accent/25 dark:border-accent/20 card-shadow'
+                      : 'bg-white dark:bg-dark-card border border-border/60 dark:border-dark-border hover:border-accent/20 hover:-translate-y-0.5 hover:card-shadow-hover'
+                  }`}
+                >
+                  <div className="flex items-center gap-3 mb-3 flex-wrap">
+                    <h3 className="font-display text-lg font-semibold text-text-primary">
+                      {item.title}
+                    </h3>
+                    <span className={`text-xs px-2.5 py-0.5 rounded-full border font-medium ${item.tagColor}`}>
+                      {item.tag}
+                    </span>
+                    {item.current && (
+                      <span className="text-xs px-2.5 py-0.5 rounded-full bg-white dark:bg-slate-800 border border-border text-text-muted">
+                        Step {index + 1} of {journeyItems.length}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-text-secondary text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     </section>
