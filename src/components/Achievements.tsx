@@ -1,7 +1,7 @@
 interface Achievement {
   title: string
   organization: string
-  date: string
+  date?: string
   description: string
   link: string | null
 }
@@ -9,7 +9,7 @@ interface Achievement {
 interface Hackathon {
   name: string
   organization: string
-  date: string
+  date?: string
   description: string
   result: string | null
   project: string | null
@@ -17,7 +17,16 @@ interface Hackathon {
 }
 
 const achievements: Achievement[] = []
-const hackathons: Hackathon[] = []
+const hackathons: Hackathon[] = [
+  {
+    name: 'UPAI-Hackdays',
+    organization: 'MLH',
+    description: 'Built CareerPilot AI — an AI-powered resume-to-job matching assistant — and won MLH Swags Prize.',
+    result: 'MLH Swags Prize Winner',
+    project: 'CareerPilot AI',
+    link: 'https://github.com/chaitanya29082000-web/careerpilot-ai',
+  },
+]
 
 function EmptyState({ message }: { message: string }) {
   return (
@@ -63,7 +72,7 @@ export default function Achievements() {
                 {achievements.map((item) => (
                   <div
                     key={item.title}
-                    className="p-6 sm:p-8 hover:bg-bg-card-hover/50 transition-colors duration-200"
+                    className="p-6 sm:p-8 hover:bg-bg-secondary/50 transition-colors duration-200"
                   >
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                       <h4 className="text-lg font-semibold text-text-primary">
@@ -120,7 +129,7 @@ export default function Achievements() {
                 {hackathons.map((item) => (
                   <div
                     key={item.name}
-                    className="p-6 sm:p-8 hover:bg-bg-card-hover/50 transition-colors duration-200"
+                    className="p-6 sm:p-8 hover:bg-bg-secondary/50 transition-colors duration-200"
                   >
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                       <h4 className="text-lg font-semibold text-text-primary">

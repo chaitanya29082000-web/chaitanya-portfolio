@@ -1,17 +1,17 @@
 const features = [
   {
-    title: 'Problem Solver',
-    description: 'I enjoy solving real-world problems through code.',
+    title: 'CS Student',
+    description: 'Studying computer science fundamentals and applying them in projects.',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.1-5.1m0 0L11.42 4.97m-5.1 5.1H21M3 3v18" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
       </svg>
     ),
     color: 'bg-accent/8 text-accent border-accent/15',
   },
   {
-    title: 'Full-Stack Enthusiast',
-    description: 'I love building end-to-end web applications.',
+    title: 'Project Builder',
+    description: 'Building practical projects to learn and apply new technologies.',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
@@ -20,24 +20,24 @@ const features = [
     color: 'bg-violet/8 text-violet border-violet/15',
   },
   {
-    title: 'Lifelong Learner',
-    description: 'Always exploring new technologies and ideas.',
+    title: 'DSA Enthusiast',
+    description: 'Practicing data structures and algorithms to strengthen problem-solving.',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.1-5.1m0 0L11.42 4.97m-5.1 5.1H21M3 3v18" />
       </svg>
     ),
     color: 'bg-cyan/8 text-cyan border-cyan/15',
   },
   {
-    title: 'Impact Driven',
-    description: 'I want to build solutions that make a positive impact.',
+    title: 'AI Explorer',
+    description: 'Curious about AI/ML and experimenting with intelligent systems.',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
       </svg>
     ),
-    color: 'bg-accent/8 text-accent border-accent/15',
+    color: 'bg-amber-500/8 text-amber-500 border-amber-500/15',
   },
 ]
 
@@ -63,23 +63,22 @@ export default function About() {
           <div className="lg:col-span-3 space-y-6">
             <div className="space-y-5 text-text-secondary text-lg leading-relaxed">
               <p>
-                I am Chaitanya — a developer with a deep interest in building intelligent
-                systems and modern web applications that solve real problems. I believe
-                in learning by building, and every project I take on is an opportunity
-                to turn an idea into something useful.
+                I am Chaitanya, a Computer Science student interested in software
+                development and AI. I spend time practicing DSA in C++, learning
+                Python, and building projects with React and TypeScript.
               </p>
               <p>
-                My focus is on practical applications of technology — from full-stack
-                web development to exploring AI and machine learning. I enjoy the
-                process of taking a concept from understanding the problem to delivering
-                a working solution.
+                I learn best by building things. Every project is a chance to pick
+                up new tools and solve real problems. Right now, I am focused on
+                strengthening my fundamentals and exploring AI/ML while preparing
+                for software engineering internships.
               </p>
             </div>
 
-            {/* Always Learning / Building */}
+            {/* Tagline */}
             <div className="inline-flex flex-col gap-1.5 px-5 py-4 bg-gradient-to-r from-accent/5 to-violet/5 dark:from-accent/10 dark:to-violet/10 border border-accent/10 dark:border-accent/20 rounded-2xl">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-violet text-sm italic font-semibold tracking-wide">Always Learning</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet to-cyan text-sm italic font-semibold tracking-wide">Always Building</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-violet text-sm italic font-semibold tracking-wide">Learning by Building</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet to-cyan text-sm italic font-semibold tracking-wide">One Project at a Time</span>
             </div>
 
             {/* Feature cards */}
@@ -123,12 +122,12 @@ export default function About() {
                 </div>
                 <div className="font-mono text-xs leading-[1.9] space-y-1">
                   <div><span className="text-[#C084FC]">const</span> <span className="text-slate-300">about</span> <span className="text-slate-500">=</span> <span className="text-slate-500">{'{'}</span></div>
-                  <div className="pl-4"><span className="text-[#67E8F9]">passion</span><span className="text-slate-500">:</span> <span className="text-[#86EFAC]">"Building impactful tech"</span><span className="text-slate-500">,</span></div>
-                  <div className="pl-4"><span className="text-[#67E8F9]">focus</span><span className="text-slate-500">:</span> <span className="text-[#86EFAC]">"AI + Web Development"</span><span className="text-slate-500">,</span></div>
-                  <div className="pl-4"><span className="text-[#67E8F9]">status</span><span className="text-slate-500">:</span> <span className="text-[#86EFAC]">"Always Learning"</span><span className="text-slate-500">,</span></div>
+                  <div className="pl-4"><span className="text-[#67E8F9]">role</span><span className="text-slate-500">:</span> <span className="text-[#86EFAC]">"CS Student"</span><span className="text-slate-500">,</span></div>
+                  <div className="pl-4"><span className="text-[#67E8F9]">focus</span><span className="text-slate-500">:</span> <span className="text-[#86EFAC]">"DSA + Web + AI/ML"</span><span className="text-slate-500">,</span></div>
+                  <div className="pl-4"><span className="text-[#67E8F9]">status</span><span className="text-slate-500">:</span> <span className="text-[#86EFAC]">"Internship Ready"</span><span className="text-slate-500">,</span></div>
                   <div className="pl-4"><span className="text-[#67E8F9]">tools</span><span className="text-slate-500">:</span> <span className="text-slate-500">[</span></div>
-                  <div className="pl-8"><span className="text-[#86EFAC]">"React"</span><span className="text-slate-500">,</span> <span className="text-[#86EFAC]">"Python"</span><span className="text-slate-500">,</span></div>
-                  <div className="pl-8"><span className="text-[#86EFAC]">"TypeScript"</span></div>
+                  <div className="pl-8"><span className="text-[#86EFAC]">"C++"</span><span className="text-slate-500">,</span> <span className="text-[#86EFAC]">"Python"</span><span className="text-slate-500">,</span></div>
+                  <div className="pl-8"><span className="text-[#86EFAC]">"React"</span><span className="text-slate-500">,</span> <span className="text-[#86EFAC]">"TypeScript"</span></div>
                   <div className="pl-4"><span className="text-slate-500">]</span></div>
                   <div><span className="text-slate-500">{'}'}</span></div>
                 </div>

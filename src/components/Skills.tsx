@@ -1,5 +1,6 @@
 interface Skill {
   name: string
+  level: string
   icon: React.ReactNode
   color: string
   bg: string
@@ -8,7 +9,33 @@ interface Skill {
 
 const skills: Skill[] = [
   {
+    name: 'C++',
+    level: 'Comfortable',
+    color: 'text-blue-500',
+    bg: 'bg-blue-500/8',
+    border: 'border-blue-500/15',
+    icon: (
+      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="3" fill="currentColor" opacity="0.1" />
+        <text x="12" y="16" textAnchor="middle" fontSize="10" fontWeight="bold" fill="currentColor">C++</text>
+      </svg>
+    ),
+  },
+  {
+    name: 'Python',
+    level: 'Comfortable',
+    color: 'text-amber-500',
+    bg: 'bg-amber-500/8',
+    border: 'border-amber-500/15',
+    icon: (
+      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 2c-1.65 0-3.15.67-4.24 1.76C6.67 4.85 6 6.35 6 8v1.5h6v1H6c-2.21 0-4 1.79-4 4v4c0 2.21 1.79 4 4 4h2v-3.5c0-1.38 1.12-2.5 2.5-2.5h5c1.38 0 2.5-1.12 2.5-2.5V8c0-1.65-.67-3.15-1.76-4.24C15.15 2.67 13.65 2 12 2zm-1.5 2.5a1 1 0 110 2 1 1 0 010-2z" opacity="0.8" />
+      </svg>
+    ),
+  },
+  {
     name: 'React',
+    level: 'Comfortable',
     color: 'text-cyan',
     bg: 'bg-cyan/8',
     border: 'border-cyan/15',
@@ -23,6 +50,7 @@ const skills: Skill[] = [
   },
   {
     name: 'TypeScript',
+    level: 'Comfortable',
     color: 'text-accent',
     bg: 'bg-accent/8',
     border: 'border-accent/15',
@@ -34,35 +62,50 @@ const skills: Skill[] = [
     ),
   },
   {
-    name: 'Python',
-    color: 'text-amber-500',
-    bg: 'bg-amber-500/8',
-    border: 'border-amber-500/15',
+    name: 'HTML/CSS',
+    level: 'Comfortable',
+    color: 'text-orange-500',
+    bg: 'bg-orange-500/8',
+    border: 'border-orange-500/15',
     icon: (
       <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M12 2c-1.65 0-3.15.67-4.24 1.76C6.67 4.85 6 6.35 6 8v1.5h6v1H6c-2.21 0-4 1.79-4 4v4c0 2.21 1.79 4 4 4h2v-3.5c0-1.38 1.12-2.5 2.5-2.5h5c1.38 0 2.5-1.12 2.5-2.5V8c0-1.65-.67-3.15-1.76-4.24C15.15 2.67 13.65 2 12 2zm-1.5 2.5a1 1 0 110 2 1 1 0 010-2z" opacity="0.8" />
+        <path d="M4 2l1.5 17L12 22l6.5-3L20 2H4zm13.3 6H8.5l.2 2.5h8.5l-.8 8.5-4.4 1.5-4.4-1.5-.3-3.5h2.2l.2 2 2.3.7 2.3-.7.2-2.5H7.8L7 6h10l-.1 1.5-.4.5z" opacity="0.8" />
       </svg>
     ),
   },
   {
-    name: 'Tailwind CSS',
-    color: 'text-cyan',
-    bg: 'bg-cyan/8',
-    border: 'border-cyan/15',
+    name: 'DSA',
+    level: 'Learning',
+    color: 'text-violet',
+    bg: 'bg-violet/8',
+    border: 'border-violet/15',
     icon: (
-      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M12 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.3.74 1.9 1.35.98 1 2.13 2.15 4.6 2.15 2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.3-.74-1.9-1.35C15.62 7.15 14.47 6 12 6zM7 12c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.3.74 1.9 1.35C8.38 16.85 9.53 18 12 18c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.3-.74-1.9-1.35C10.62 13.15 9.47 12 7 12z" opacity="0.8" />
+      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.1-5.1m0 0L11.42 4.97m-5.1 5.1H21M3 3v18" />
       </svg>
     ),
   },
   {
     name: 'Git',
+    level: 'Familiar',
     color: 'text-orange-500',
     bg: 'bg-orange-500/8',
     border: 'border-orange-500/15',
     icon: (
       <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M21.62 11.11l-8.73-8.73a1.3 1.3 0 00-1.84 0L9.17 4.27l2.32 2.32a1.55 1.55 0 011.97 1.97l2.24 2.24a1.56 1.56 0 011.6.37 1.56 1.56 0 01-.37 2.54 1.56 1.56 0 01-1.6-.04l-2.12-2.12v5.49a1.57 1.57 0 01-.43 1.09 1.56 1.56 0 01-2.21 0 1.56 1.56 0 01-.43-1.09v-5.49a1.56 1.56 0 01-.46-1.11l-2.4-2.4a1.3 1.3 0 00-1.84 0l-3.62 3.62a1.3 1.3 0 000 1.84l8.73 8.73a1.3 1.3 0 001.84 0l8.75-8.75a1.3 1.3 0 000-1.84z" opacity="0.8" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Tailwind CSS',
+    level: 'Familiar',
+    color: 'text-cyan',
+    bg: 'bg-cyan/8',
+    border: 'border-cyan/15',
+    icon: (
+      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.3.74 1.9 1.35.98 1 2.13 2.15 4.6 2.15 2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.3-.74-1.9-1.35C15.62 7.15 14.47 6 12 6zM7 12c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.3.74 1.9 1.35C8.38 16.85 9.53 18 12 18c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.3-.74-1.9-1.35C10.62 13.15 9.47 12 7 12z" opacity="0.8" />
       </svg>
     ),
   },
@@ -87,11 +130,11 @@ export default function Skills() {
 
         {/* Supporting text */}
         <p className="text-text-secondary text-base max-w-xl mb-12 leading-relaxed">
-          Technologies I use to build modern, performant web applications and intelligent systems.
+          Technologies and tools I work with, and where I am in my learning journey.
         </p>
 
         {/* Skills grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 lg:gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 lg:gap-5">
           {skills.map((skill) => (
             <div
               key={skill.name}
@@ -103,6 +146,15 @@ export default function Skills() {
               </div>
               <span className="text-sm font-semibold text-text-primary">
                 {skill.name}
+              </span>
+              <span className={`text-xs px-2.5 py-0.5 rounded-full border font-medium ${
+                skill.level === 'Comfortable'
+                  ? 'bg-green-500/10 text-green-600 dark:text-green-400 border-green-500/20'
+                  : skill.level === 'Familiar'
+                    ? 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20'
+                    : 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20'
+              }`}>
+                {skill.level}
               </span>
               {/* Bottom accent */}
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-blue rounded-full group-hover:w-10 transition-all duration-300" />

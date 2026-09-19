@@ -32,16 +32,22 @@ export default function CodeVisual() {
             <span className="text-slate-500">,</span>
           </div>
           <div className="pl-6">
+            <span className="text-[#67E8F9]">role</span>
+            <span className="text-slate-500">: </span>
+            <span className="text-[#86EFAC]">"CS Student"</span>
+            <span className="text-slate-500">,</span>
+          </div>
+          <div className="pl-6">
             <span className="text-[#67E8F9]">skills</span>
             <span className="text-slate-500">: </span>
             <span className="text-slate-500">[</span>
           </div>
           <div className="pl-10">
-            <span className="text-[#86EFAC]">"Web"</span>
+            <span className="text-[#86EFAC]">"C++"</span>
             <span className="text-slate-500">, </span>
-            <span className="text-[#86EFAC]">"AI"</span>
+            <span className="text-[#86EFAC]">"Python"</span>
             <span className="text-slate-500">, </span>
-            <span className="text-[#86EFAC]">"Problem Solving"</span>
+            <span className="text-[#86EFAC]">"React"</span>
           </div>
           <div className="pl-6">
             <span className="text-slate-500">]</span>
@@ -50,7 +56,7 @@ export default function CodeVisual() {
           <div className="pl-6">
             <span className="text-[#67E8F9]">goal</span>
             <span className="text-slate-500">: </span>
-            <span className="text-[#86EFAC]">"Create a positive impact"</span>
+            <span className="text-[#86EFAC]">"Internship Ready"</span>
           </div>
           <div>
             <span className="text-slate-500">{'}'}</span>

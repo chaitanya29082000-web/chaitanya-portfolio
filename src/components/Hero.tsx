@@ -2,10 +2,10 @@ import CodeVisual from './CodeVisual'
 
 const techStack = [
   { name: 'React', icon: 'R', color: 'text-cyan bg-cyan/8 border-cyan/15 dark:bg-cyan/10 dark:border-cyan/20' },
-  { name: 'Next.js', icon: 'N', color: 'text-text-primary bg-text-primary/5 border-text-primary/10 dark:bg-slate-700/50 dark:border-slate-600/50 dark:text-slate-200' },
+  { name: 'TypeScript', icon: 'TS', color: 'text-blue-600 bg-blue-600/8 border-blue-600/15 dark:text-blue-400 dark:bg-blue-500/10 dark:border-blue-500/20' },
   { name: 'Python', icon: 'P', color: 'text-amber-500 bg-amber-500/8 border-amber-500/15 dark:bg-amber-500/10 dark:border-amber-500/20' },
-  { name: 'Node.js', icon: 'No', color: 'text-green-600 bg-green-600/8 border-green-600/15 dark:text-green-400 dark:bg-green-500/10 dark:border-green-500/20' },
-  { name: 'Git', icon: 'G', color: 'text-orange-500 bg-orange-500/8 border-orange-500/15 dark:bg-orange-500/10 dark:border-orange-500/20' },
+  { name: 'C++', icon: 'C+', color: 'text-blue-500 bg-blue-500/8 border-blue-500/15 dark:bg-blue-500/10 dark:border-blue-500/20' },
+  { name: 'DSA', icon: 'D', color: 'text-violet bg-violet/8 border-violet/15 dark:bg-violet/10 dark:border-violet/20' },
 ]
 
 export default function Hero() {
@@ -47,23 +47,23 @@ export default function Hero() {
               </div>
 
               {/* Name */}
-              <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] mb-6 animate-[fadeInUp_0.6s_ease-out_0.1s_forwards] opacity-0">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] mb-6 animate-[fadeInUp_0.6s_ease-out_0.1s_forwards] opacity-0">
                 <span className="text-gradient-blue">Chaitanya</span>
               </h1>
 
               {/* Statement */}
               <p className="text-xl sm:text-2xl text-text-secondary leading-relaxed mb-6 animate-[fadeInUp_0.6s_ease-out_0.2s_forwards] opacity-0">
-                A Developer who turns ideas into{' '}
+                Computer Science student building{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-violet font-semibold">
-                  impactful products.
+                  practical software and AI projects.
                 </span>
               </p>
 
               {/* Supporting text */}
               <p className="text-text-muted text-base leading-relaxed mb-10 max-w-md animate-[fadeInUp_0.6s_ease-out_0.3s_forwards] opacity-0">
-                I build modern web applications, explore AI, and work on meaningful
-                real-world solutions. Currently focused on creating technology that
-                makes a difference.
+                I practice DSA in C++, learn Python, and build with React and
+                TypeScript. Currently exploring AI/ML and preparing for
+                software engineering internships.
               </p>
 
               {/* CTAs */}

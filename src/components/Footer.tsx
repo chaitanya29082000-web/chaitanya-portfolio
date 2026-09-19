@@ -2,6 +2,8 @@ const footerLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Learning Journey', href: '#journey' },
+  { label: 'Achievements', href: '#achievements' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -44,7 +46,7 @@ export default function Footer() {
               </a>
               <p className="mt-1 text-slate-300 font-medium">Chaitanya</p>
               <p className="mt-3 text-slate-400 text-sm leading-relaxed max-w-xs">
-                Building a cleaner, brighter tomorrow with code.
+                Computer Science student building practical software and AI projects.
               </p>
             </div>
 

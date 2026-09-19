@@ -6,7 +6,8 @@ const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#projects' },
   { label: 'Skills', href: '#skills' },
-  { label: 'Experience', href: '#experience' },
+  { label: 'Learning Journey', href: '#journey' },
+  { label: 'Achievements', href: '#achievements' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -49,7 +50,7 @@ export default function Navbar() {
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className={`max-w-6xl mx-auto px-6 transition-all duration-300 ${
+      <div className={`max-w-6xl mx-auto px-4 sm:px-6 transition-all duration-300 ${
         scrolled
           ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-border/50 dark:border-slate-700/50 rounded-2xl shadow-lg shadow-black/[0.03] dark:shadow-black/[0.2]'
           : ''
@@ -65,7 +66,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Nav - centered */}
-          <ul className="hidden md:flex items-center gap-1">
+          <ul className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
@@ -99,7 +100,7 @@ export default function Navbar() {
             {/* Mobile Hamburger */}
             <button
               type="button"
-              className="md:hidden flex flex-col gap-1.5 p-2 rounded-xl hover:bg-bg-secondary dark:hover:bg-slate-800 transition-colors"
+              className="lg:hidden flex flex-col gap-1.5 p-2 rounded-xl hover:bg-bg-secondary dark:hover:bg-slate-800 transition-colors"
               onClick={() => setIsOpen(!isOpen)}
               aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
               aria-expanded={isOpen}
@@ -128,7 +129,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         id="mobile-menu"
-        className={`md:hidden overflow-hidden transition-all duration-300 ${
+        className={`lg:hidden overflow-hidden transition-all duration-300 ${
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >

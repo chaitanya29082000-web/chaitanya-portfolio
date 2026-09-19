@@ -23,6 +23,7 @@ export default function ThemeToggle() {
       onClick={toggle}
       className="relative w-10 h-10 flex items-center justify-center rounded-xl border border-border/50 dark:border-slate-700/50 bg-white/80 dark:bg-slate-800/80 text-text-secondary hover:text-text-primary hover:border-accent/30 transition-all duration-200"
       aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
+      aria-pressed={dark}
       title={dark ? 'Switch to light mode' : 'Switch to dark mode'}
     >
       {/* Sun icon */}
