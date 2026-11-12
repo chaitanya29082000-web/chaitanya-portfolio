@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#f2f1ea" stroke-opacity=".055" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glow" cx="78%" cy="18%" r="58%">
+      <stop offset="0" stop-color="#c7f56a" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#c7f56a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c7f56a" stop-opacity=".1"/>
+      <stop offset=".5" stop-color="#c7f56a" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#c7f56a" stop-opacity=".1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#08090a"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <g font-family="'IBM Plex Mono', monospace" fill="#8b8e84" font-size="15" letter-spacing="3">
+    <text x="72" y="76">CHAITANYA BHAMBERE</text>
+    <text x="1128" y="76" text-anchor="end">PORTFOLIO / 2026</text>
+  </g>
+
+  <line x1="72" y1="104" x2="1128" y2="104" stroke="#f2f1ea" stroke-opacity=".14"/>
+
+  <g font-family="'Instrument Serif', Georgia, 'Times New Roman', serif" fill="#f2f1ea">
+    <text x="64" y="278" font-size="166" letter-spacing="-7">Chaitanya</text>
+    <text x="64" y="368" font-size="86" font-style="italic" fill="#c5c6bd">builds in public<tspan fill="#c7f56a">.</tspan></text>
+  </g>
+
+  <line x1="72" y1="430" x2="1128" y2="430" stroke="#f2f1ea" stroke-opacity=".14"/>
+
+  <g font-family="'IBM Plex Mono', monospace" fill="#c5c6bd" font-size="17" letter-spacing="2">
+    <text x="72" y="482">OPEN-SOURCE CONTRIBUTOR</text>
+    <text x="72" y="512">&amp; SOFTWARE DEVELOPER</text>
+    <text x="72" y="570" fill="#8b8e84" font-size="14">NANDED, MAHARASHTRA, INDIA</text>
+  </g>
+
+  <g transform="translate(900 280)">
+    <circle cx="0" cy="0" r="92" fill="none" stroke="#c7f56a" stroke-opacity=".26"/>
+    <circle cx="0" cy="0" r="62" fill="none" stroke="#c7f56a" stroke-opacity=".42" stroke-dasharray="3 7"/>
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#c7f56a" stroke-opacity=".55"/>
+    <path d="M-128 0H128M0 -128V128" stroke="#f2f1ea" stroke-opacity=".13" stroke-dasharray="2 7"/>
+    <circle cx="0" cy="0" r="5" fill="#c7f56a"/>
+    <circle cx="62" cy="-62" r="7" fill="#c7f56a"/>
+    <circle cx="62" cy="-62" r="17" fill="none" stroke="#c7f56a" stroke-opacity=".5"/>
+    <text x="86" y="-64" font-family="'IBM Plex Mono', monospace" font-size="12" letter-spacing="2" fill="#c7f56a">OPEN</text>
+    <text x="86" y="-48" font-family="'IBM Plex Mono', monospace" font-size="12" letter-spacing="2" fill="#c7f56a">SOURCE</text>
+  </g>
+
+  <g font-family="'IBM Plex Mono', monospace" fill="#8b8e84" font-size="15" letter-spacing="1.5">
+    <text x="72" y="606">github.com/chaitanya29082000-web</text>
+    <text x="1128" y="606" text-anchor="end" fill="#c7f56a">PUBLIC EVIDENCE ONLY</text>
+  </g>
+</svg>

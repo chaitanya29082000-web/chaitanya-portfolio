@@ -1,0 +1,18 @@
+{
+  "name": "Chaitanya Bhambere — Portfolio",
+  "short_name": "Chaitanya",
+  "description": "Aspiring open-source contributor and software developer in Nanded, India.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#08090a",
+  "theme_color": "#08090a",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
